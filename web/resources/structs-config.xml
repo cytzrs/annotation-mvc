@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<struts>
+    <formbeans>
+        <bean name="judge" class="busness.JudgeForm"></bean>
+        <bean name="user" class="busness.AddUserForm"></bean>
+    </formbeans>
+
+    <action-mapping>
+        <action name="judge" type="busness.JudgeAction" path="/a">
+            <forward name="success" value="/views/success.jsp"></forward>
+            <forward name="failure" value="/views/failure.jsp"></forward>
+        </action>
+        <action name="user" type="busness.AddUserAction" path="/userAdd">
+            <forward name="success" value="/views/addUserSuccess.jsp"></forward>
+            <forward name="failure" value="/views/addUserFailuer.jsp"></forward>
+        </action>
+    </action-mapping>
+
+</struts>
